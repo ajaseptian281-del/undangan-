@@ -1,1 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Rizky & Aulia</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7efe5;
+    color:#4b4037;
+}
+
+section{
+    padding:70px 25px;
+    text-align:center;
+}
+
+.cover{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        rgba(247,239,229,.92),
+        rgba(247,239,229,.97)
+    );
+}
+
+.label{
+    letter-spacing:5px;
+    font-size:12px;
+}
+
+.cover h1{
+    font-family:Georgia,serif;
+    font-size:58px;
+    line-height:1;
+    margin:20px 0;
+}
+
+.cover h1 span{
+    display:block;
+    font-size:28px;
+    margin:10px;
+}
+
+button,
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    border:0;
+    border-radius:30px;
+    background:#8d735c;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.container{
+    max-width:650px;
+    margin:auto;
+}
+
+h2{
+    font-family:Georgia,serif;
+    font-size:36px;
+}
+
+p{
+    line-height:1.8;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin:15px 0;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:30px;
+}
+
+.countdown div{
+    background:white;
+    width:75px;
+    padding:15px 5px;
+    border-radius:15px;
+}
+
+.countdown strong{
+    display:block;
+    font-size:25px;
+}
+
+.countdown small{
+    font-size:10px;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+
+<section class="cover">
+
+    <div class="label">
+        THE WEDDING OF
+    </div>
+
+    <h1>
+        Rizky
+        <span>&</span>
+        Aulia
+    </h1>
+
+    <p>
+        Minggu, 20 Desember 2026
+    </p>
+
+    <button onclick="bukaUndangan()">
+        💌 Buka Undangan
+    </button>
+
+</section>
+
+
+<main id="undangan">
+
+<!-- PEMBUKA -->
+
+<section>
+<div class="container">
+
+    <div class="label">ASSALAMUALAIKUM</div>
+
+    <h2>Rizky & Aulia</h2>
+
+    <p>
+        Dengan memohon rahmat dan ridho Allah SWT,
+        kami bermaksud mengundang Bapak/Ibu/Saudara/i
+        untuk hadir di hari bahagia kami.
+    </p>
+
+</div>
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section>
+<div class="container">
+
+    <div class="label">SAVE THE DATE</div>
+
+    <h2>Menuju Hari Bahagia</h2>
+
+    <div class="countdown">
+
+        <div>
+            <strong id="hari">0</strong>
+            <small>HARI</small>
+        </div>
+
+        <div>
+            <strong id="jam">0</strong>
+            <small>JAM</small>
+        </div>
+
+        <div>
+            <strong id="menit">0</strong>
+            <small>MENIT</small>
+        </div>
+
+        <div>
+            <strong id="detik">0</strong>
+            <small>DETIK</small>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ACARA -->
+
+<section>
+<div class="container">
+
+    <div class="label">WEDDING EVENT</div>
+
+    <h2>Acara Pernikahan</h2>
+
+    <div class="card">
+
+        <h3>💍 Akad Nikah</h3>
+
+        <p>
+            Minggu, 20 Desember 2026
+        </p>
+
+        <p>
+            <b>09.00 WIB</b>
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>🎉 Resepsi</h3>
+
+        <p>
+            Minggu, 20 Desember 2026
+        </p>
+
+        <p>
+            <b>11.00 - 14.00 WIB</b>
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- LOKASI -->
+
+<section>
+<div class="container">
+
+    <div class="label">LOCATION</div>
+
+    <h2>Lokasi Acara</h2>
+
+    <div class="card">
+
+        <h3>Gedung Serbaguna Bahagia</h3>
+
+        <p>
+            Jakarta, Indonesia
+        </p>
+
+        <a
+        class="btn"
+        href="https://maps.google.com"
+        target="_blank">
+
+        📍 Buka Google Maps
+
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- RSVP -->
+
+<section>
+<div class="container">
+
+    <div class="label">RSVP</div>
+
+    <h2>Konfirmasi Kehadiran</h2>
+
+    <p>
+        Kehadiran dan doa restu Anda
+        merupakan kebahagiaan bagi kami.
+    </p>
+
+    <a
+    class="btn"
+    href="https://wa.me/6281234567890"
+    target="_blank">
+
+    💬 Konfirmasi WhatsApp
+
+    </a>
+
+</div>
+</section>
+
+
+<!-- PENUTUP -->
+
+<section>
+<div class="container">
+
+    <div class="label">THANK YOU</div>
+
+    <h2>Terima Kasih</h2>
+
+    <p>
+        Merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Anda berkenan hadir
+        di hari bahagia kami.
+    </p>
+
+    <h2>Rizky & Aulia</h2>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 Rizky & Aulia
+</footer>
+
+
+<script>
+
+function bukaUndangan(){
+
+    document
+    .getElementById("undangan")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+const tanggal =
+new Date("December 20, 2026 09:00:00").getTime();
+
+
+setInterval(function(){
+
+    const sekarang =
+    new Date().getTime();
+
+    const selisih =
+    tanggal - sekarang;
+
+
+    const hari =
+    Math.floor(
+        selisih/(1000*60*60*24)
+    );
+
+    const jam =
+    Math.floor(
+        (selisih/(1000*60*60))%24
+    );
+
+    const menit =
+    Math.floor(
+        (selisih/(1000*60))%60
+    );
+
+    const detik =
+    Math.floor(
+        (selisih/1000)%60
+    );
+
+
+    document.getElementById("hari").innerText =
+    hari;
+
+    document.getElementById("jam").innerText =
+    jam;
+
+    document.getElementById("menit").innerText =
+    menit;
+
+    document.getElementById("detik").innerText =
+    detik;
+
+},1000);
+
+</script>
+
+</body>
+</html>
